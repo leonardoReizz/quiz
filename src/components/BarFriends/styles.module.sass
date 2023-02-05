@@ -1,0 +1,54 @@
+@use '@/styles/_library.sass' as *
+@use "@/styles/_util" as *
+
+
+.action.open
+  right: 270px 
+  z-index: 100
+
+.action
+  position: absolute
+  right: 31px
+  top: 40px
+
+  transition: right 0.6s ease
+  z-index: 200
+
+  button  
+    @include flex(center, center, row)
+    font-size: 1.2rem
+    width: 25px
+    height: 25px
+    border-radius: 5rem
+
+    transition: background-color 0.2s ease
+
+    &:hover
+      background-color: $pink-700
+
+
+.barFriends.open 
+  right: 0
+  .barFriendsContainer
+    width: 300px
+
+.barFriends
+  @include flex(flex-start, center, row)
+  position: relative
+  height: 100%
+  padding: 1rem 1rem 1rem 0
+  transition: width 0.6s ease, right 0.6s ease
+  
+  .barFriendsContainer
+    width: 65px
+    transition: width 0.6s ease, right 0.4s ease
+    height: 100%
+    border-radius: 32px
+    background-color: $blue-800
+    padding: 2rem
+   
+    
+    h3
+      color: $gray-600
+      margin-left: 32px
+
